@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="一个用于熟悉 Codex Web 工作流的轻量测试应用。" />
+    <title>Codex Web Lab</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Codex Web Lab 首页">
+        <span class="brand-mark" aria-hidden="true">C</span>
+        <span>Codex Web Lab</span>
+      </a>
+      <button class="icon-button" id="theme-toggle" type="button" aria-label="切换深色模式">◐</button>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">LEARN BY BUILDING</p>
+          <h1>把想法变成<br /><span>可运行的代码。</span></h1>
+          <p class="hero-copy">这是一个零依赖的练习仓库。试着让 Codex 添加功能、修复问题，再观察每一次代码变更。</p>
+        </div>
+        <div class="status-card" aria-label="项目状态">
+          <span class="pulse"></span>
+          <div><strong>项目已就绪</strong><small>Vanilla HTML · CSS · JavaScript</small></div>
+        </div>
+      </section>
+
+      <section class="workspace" aria-labelledby="tasks-heading">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">YOUR PLAYGROUND</p>
+            <h2 id="tasks-heading">练习任务</h2>
+          </div>
+          <span id="progress-label">0 / 3 完成</span>
+        </div>
+        <div class="progress-track" aria-hidden="true"><div id="progress-bar"></div></div>
+        <div id="task-list" class="task-list"></div>
+        <form id="task-form" class="task-form">
+          <label class="sr-only" for="task-input">新任务名称</label>
+          <input id="task-input" name="task" maxlength="60" placeholder="添加一个新的练习任务…" required />
+          <button type="submit">添加任务 <span aria-hidden="true">↗</span></button>
+        </form>
+      </section>
+
+      <section class="prompt-card">
+        <div class="prompt-icon" aria-hidden="true">✦</div>
+        <div>
+          <p class="eyebrow">TRY THIS PROMPT</p>
+          <p>“为任务卡片添加截止日期，并将过期任务标记为红色。”</p>
+        </div>
+        <button id="copy-prompt" type="button">复制</button>
+      </section>
+    </main>
+
+    <footer>Designed for experimenting with Codex <span>·</span> <span id="year"></span></footer>
+  </body>
+</html>
